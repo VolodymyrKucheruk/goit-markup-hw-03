@@ -34,13 +34,45 @@ body {
   | HEDER STYLE
   |============================
 */
+h1 h2 h3 h4 h5 h6 {
+  margin: 0 auto;
+}
+p {
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0 auto;
+}
+img {
+  min-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
+/* Header style */
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
+.header-studio {
+  border-bottom: 1px solid var(--cornflower-color);
+}
+.hed-container {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  padding: 24px 0;
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -50,11 +82,19 @@ body {
   text-transform: uppercase;
   color: var(--iris-color);
   text-decoration: none;
+  display: block;
+  margin-right: 76px;
 }
 .heder-logo-text {
   color: var(--navyblue-color);
 }
 
+.nav {
+  display: flex;
+  gap: 24px;
+  margin: 0px;
+  padding-left: 0px;
+}
 .nav .list {
   list-style: none;
   cursor: pointer;
@@ -74,10 +114,17 @@ body {
 .nav-items:focus {
   color: var(--ocean-color);
 }
+
 .header-address {
   font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.address {
+  display: flex;
+  gap: 40px;
+}
 .address .list {
   list-style: none;
 }
@@ -101,9 +148,16 @@ body {
 
 /* Main content style Studio */
 
+/* Hero section*/
 .section-hero {
   background-color: var(--navyblue-color);
+  padding: 188px 0;
 }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .section-hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -111,6 +165,11 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white-main-color);
+  width: 496px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
 }
 .section-hero-btn {
   font-family: 'Roboto', sans-serif;
@@ -123,21 +182,57 @@ body {
   color: var(--white-main-color);
   cursor: pointer;
   border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
 }
 .section-hero-btn:hover,
 .section-hero-btn:focus {
   background-color: var(--ocean-color);
 }
+/* section 1 */
+.section-one {
+  display: flex;
 
+  padding: 120px 156px;
+}
 .section-text .list {
   list-style: none;
+  display: flex;
+  gap: 24px;
+  padding-left: 0;
+  margin: 0;
 }
+.section-text-elements {
+}
+
+.visually-hidden {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
 .section-text-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--navyblue-color);
+  margin: 0 0 8px 0;
 }
 .section-text-content {
   font-weight: 400;
@@ -145,8 +240,12 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate-body-color);
+  width: 264px;
 }
-
+/* section 2*/
+.section-image-container {
+  padding: 120px 156px;
+}
 .section-image-title {
   font-size: 36px;
   line-height: 1.11;
@@ -154,12 +253,22 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navyblue-color);
+  margin: 0 0 72px 0;
 }
 .section-image .list {
   list-style: none;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
+/* section 3*/
 .section-team {
   background-color: var(--cloud-color);
+}
+.section-team-container {
+  padding: 120px 156px;
 }
 
 .section-team-title {
@@ -170,9 +279,16 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navyblue-color);
+  margin: 0 0 72px 0;
 }
 .section-team .list {
   list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 .section-team-list-item {
   font-weight: 500;
@@ -201,6 +317,12 @@ body {
 
 .list-buttons {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin-top: 96px;
+  margin-bottom: 72px;
 }
 .button-item {
   font-family: 'Roboto', sans-serif;
@@ -208,23 +330,49 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  background-color: var(--cloud-color);
   color: var(--iris-color);
   border: none;
   cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--cornflower-color);
+  background-color: var(--cloud-color);
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
 }
 .button-item:hover,
 .button-item:focus {
   color: var(--white-main-color);
   background-color: var(--ocean-color);
 }
+.portfolio-list-image {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  padding-bottom: 120px;
+  row-gap: 48px;
+  column-gap: 24px;
+
+}
+
 .portfolio-list-image .list {
   list-style: none;
+  display: flex;
 }
 .portfolio-list-image-item {
+  display: flex;
+  border: 1px solid var(--cornflower-color);
+  background-color: var(--white-main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
 }
 .portfolio-link-image-items .link {
   text-decoration: none;
+  
 }
 .cards-title {
   font-weight: 500;
@@ -232,12 +380,16 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navyblue-color);
+  display: flex;
+  padding: 0px 16px;
 }
 .cards-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate-body-color);
+  display: flex;
+  padding: 0px 16px;
 }
 
 /**
@@ -250,7 +402,15 @@ body {
 .footer {
   background-color: var(--navyblue-color);
   color: var(--cloud-color);
+  height: 312px;
+  padding: auto;
 }
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 156px;
+}
+
 .footer-logo-link {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -260,6 +420,8 @@ body {
   text-transform: uppercase;
   color: var(--iris-color);
   text-decoration: none;
+  margin-top: 101.5px;
+  margin-bottom: 17.5px;
 }
 
 .footer-logo-text {
@@ -269,4 +431,6 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.5;
   color: var(--cloud-color);
+  margin-left: 0;
+  width: 264px;
 }
